@@ -3,8 +3,6 @@
 function Test001()
 {
     alert("Kcuf!!");
-    
-    
 }
 
 

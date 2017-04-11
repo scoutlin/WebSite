@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Main Page</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="/JSs/main.js"></script>
+    <script src="/JSs/SFS2X_API_JS.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Bootstrap Tutorial</h1>
+            <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
+        </div>
+        <p>This is some text.........</p>
+        <p>This is another text.</p>
+    </div>
+
+    <div class="container">
+        <button type="button" class="btn btn-default scottGET">GET</button>
+        <button type="button" class="btn btn-default scottPOST">POST</button>
+    </div>
+
+
+
+
+    <script>
+        $(".scottGET").click(function () {
+            //$(".scottGET").hide("slow", function () {
+            //    alert("The paragraph is now hidden");
+            //});
+            alert("scottGET Click");
+
+            $.get("process_get", {first_name:"Scott", last_name:"Lin"}, function (data, status) {
+                alert("Data: " + data + "\nStatus: " + status);
+            })
+        });
+
+        $(".scottPOST").click(function () {
+            //$(".scottGET").hide("slow", function () {
+            //    alert("The paragraph is now hidden");
+            //});
+            alert("scottPOST Click");
+        });
+    </script>
+</body>
+
+
+
+</html>
